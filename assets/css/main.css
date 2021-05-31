@@ -3164,8 +3164,16 @@ h5 {
   background: rgb(255, 210, 210);
 }
 
+.po {
+  background: rgb(114, 33, 33);
+}
+
 .dev {
   background: rgb(116, 116, 116);
+}
+
+.sco {
+  background: rgb(150, 201, 185);
 }
 
 .style4 {
