@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Michèle Timmers</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="right-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header" class="wrapper">
+					
+					<!-- Logo -->
+					<div id="logo">
+						<h1><a href="../index.html">Portfolio Michèle Timmers</a></h1>
+						<p>Semester 6</p>
+					</div>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="../index.html">Home</a></li>
+							<li><a href="../index.html#opdrachtentag">Opdrachten</a></li>
+							
+						</ul>
+					</nav>
+
+
+				</section>
+
+			<!-- Main -->
+				<section id="main" class="wrapper style2">
+					<div class="title">Simac</div>
+					<div class="container">
+						<div class="row gtr-150">
+							<div class="col-8 col-12-medium">
+
+								<!-- Content -->
+									<div id="content">
+										<article class="box post">
+											<header class="style2" style="color: rgb(202, 202, 202);">
+												<h2 style="color: rgb(255, 255, 255); font-size: 40px;">Development Review</h2>
+												<section class="box">
+                                                    <a href="Feedback.html" id="midden" class="button style2 medium">Vorige opdracht</a>
+                                        
+                                                    <a href="Usability.html" id="midden" class="button style2 medium">Volgende opdracht</a>
+                                                </section>
+											</header>
+											
+                                            <h2 style="color: rgb(226, 226, 226); font-size: 20px;">Inleiding</h2>
+                                            <p>Tijdens het bouwen van de app, maak ik gebruik van user stories en de MoSCoW methode om duidelijk te krijgen waar ik nog aan moet werken. Door bepaalde elementen van de app in de “Must” van de methode te zetten, weet ik dat ik daar als eerste naar moet kijken. 
+                                                <br>
+                                                Voor mijn gedeelte van de app was dat de login pagina en het geven en lezen van een review bij een recept. 
+                                                <br><br>
+                                                Tijdens het werken aan de app, werkte ik met GIT in een aparte ‘branch’, zodat mijn bijdrage en volledige code hier ook te lezen is:  <br>
+                                                <a style="color: white;" target="_blank" href=" https://github.com/luukvanettinger/simac-frontend/tree/loginstyle"> https://github.com/luukvanettinger/simac-frontend/tree/loginstyle</a>
+                                                <br>
+                                                <a style="color: white;" target="_blank" href=" https://github.com/luukvanettinger/simac-frontend/tree/review"> https://github.com/luukvanettinger/simac-frontend/tree/review</a>
+                                                
+                                            </p>
+
+                                            
+                                            <h2 style="color: rgb(226, 226, 226); font-size: 20px;">Aanpak</h2>
+                                            <p>Ik werkte tijdens de app aan de volgende user stories: <br>
+                                                -  Als Simac medewerker wil ik een recept een review geven met opmerking, zodat ik duidelijk kan maken 
+                                                aan mijn collega’s wat er wel of niet goed is aan een recept<br>
+                                                Acceptatie criteria:<br>
+                                                -  Review geven aan een recept<br>
+                                                -  Opmerking bij het reviewen van een plaatsen<br>
+                                                <br>
+                                                
+                                                -  Als Simac werknemer wil ik kunnen zien welk recept goed gewaardeerd wordt, zodat ik weet welk recept lekker is.<br>
+                                                Acceptatie criteria<br>
+                                                -  Reviewen van een recept<br>
+                                                Een recept moet aangeklikt kunnen worden en details laten zien<br><br>
+                                                
+                                                -  Als Simac medewerker wil ik bepaalde recepten van een gekozen thema kunnen kiezen, zodat ik recepten kan vinden passen bij mijn gekozen moment.  <br>
+                                                Acceptatie criteria<br>
+                                                -  Thema’s die passen bij Simac medewerkers<br>
+                                                -  Recepten filteren<br>
+                                                
+                                            </p>
+
+                                            <h2 style="color: rgb(226, 226, 226); font-size: 20px;">Resultaat</h2>
+                                            <p>
+												Ik heb eerst een ‘state’ aangemaakt. Hiermee kun je data opslaan wat later door een gebruiker toegevoegd kan worden. 
+                                                <br>
+                                                useEffect-functie wordt aangeroepen wanneer een pagina wordt geladen of een actie wordt uitgevoerd. Dus wanneer de pagina wordt geopend, worden de reviews geopend en getoond.  
+                                                <br>
+                                                <a href="/images/carbon5.png"><img src="/images/carbon5.png" style="width: 90%;" alt="w2"></a> <br>
+                                                 <br>
+                                                 Daarna heb ik code toegevoegd waarmee ik data uit de Firebase haal en kan laten zien op de pagina. De 
+                                                 reviews staan op de Firebase achter de recepten. Dus eerst roep ik de 'collection' aan waar de recepten staan, dan 
+                                                 naar de 'id' van een recept, en dan bevat dat specifieke recept weer een collection aan reviews. <br>
+                                                De code:<br>
+                                                <a href="/images/carbon6.png"><img src="/images/carbon6.png" style="width: 90%;" alt="w2"></a> <br>
+                                                Nu moeten de reviews weergegeven worden wanneer je op de sterren klikt. Dit heb ik in een ‘modal’ geplaatst. <br>
+                                                <a href="/images/carbon7.png"><img src="/images/carbon7.png" style="width: 90%;" alt="w2"></a> <br>
+                                                In deze modal wil ik de reviews ophalen, de auteur en datum. Eerst laat ik checken of er reviews zijn, door middel van 
+                                                ‘allReviews ?’. Als dat zo is, worden deze later ingeladen in de tekst inputs. <br>
+                                                <a href="/images/carbon8.png"><img src="/images/carbon8.png" style="width: 90%;" alt="w2"></a> <br>
+
+                                                Daarna ben ik verdergegaan met de styling van de reviewsectie.<br>
+
+
+                                                <b>Filteren van recepten </b><br>
+
+                                                Op de receptenpagina heb ik ook nog een pagina gemaakt waar je alle recepten kunt vinden. De 
+                                                recepten kun je hier op thema bekijken. De recepten passen bij bepaalde aspecten die het welzijn
+                                                 verbeteren maar vooral terugkomen bij het concept: betrokkenheid en verbondenheid creëren (Jumbo, 2021). <br><br>
+
+                                                In een later stadium, wanneer veel mensen gebruik maken van de app, kan Simac kiezen voor meer 
+                                                gezondere recepten, zodat ze zich meer gaan richten op het welzijn. <br><br>
+
+                                                Code uitleg<br>
+                                                In de state heb ik undefined aangegeven, want de filter moet nog niet geactiveerd zijn bij het 
+                                                openen van de pagina. Wanneer je vervolgens op een thema klikt, voert hij die filter in bij de 
+                                                state, en zoekt hij alle recepten met het gekozen thema. <br>
+                                                <a href="/images/carbon9.png"><img src="/images/carbon9.png" style="width: 90%;" alt="w2"></a> <br>
+                                                ‘let’ is hetzelfde als een ‘const’, alleen kan deze nog aangepast worden omdat ik hier de filter in ga 
+                                                zetten. Op basis van de state wordt de let ingevuld<br>
+                                                <a href="/images/carbon10.png"><img src="/images/carbon10.png" style="width: 90%;" alt="w2"></a> <br>
+                                                Daarna komt de code waar de filter in verwerkt is. Ik heb verschillende thema’s uitgekozen die bij Simac passen. Ze zorgen voor verbonden en betrokkenheid en ook voor een goed welzijn. Denk aan ontspanning en samen koken. 
+                                                <br>
+                                                Als je op een thema klikt, moeten de recepten verschijnen die daarbij horen. Als je weer dezelfde thema klikt, moeten alle andere recepten ook weer tevoorschijn komen. 
+                                                Dit heb ik gedaan in dit gedeelte: <br>
+                                                <a href="/images/carbon11.png"><img src="/images/carbon11.png" style="width: 90%;" alt="w2"></a> <br>
+                                                De filter staat als eerste op ‘undefined’. Ook bij de andere thema’s is dit zo. Als je vervolgens op 1 thema klikt, wordt dit naar ‘let filteredrecipes = recipes’  verstuurd. 
+                                                <br>
+                                                De volledige filter code: <br>
+                                                <a href="/images/carbon12.png"><img src="/images/carbon12.png" style="width: 90%;" alt="w2"></a> <br>
+                                                De recepten moeten vanuit de database naar de pagina gehaald worden. Dit doe ik door de parameters 
+                                                boven aan te geven die opgehaald moeten worden uit de database:<br>
+                                                <a href="/images/carbon13.png"><img src="/images/carbon13.png" style="width: 90%;" alt="w2"></a> <br>
+                                                Vervolgens worden de recepten hier weergegeven:<br>
+                                                <a href="/images/carbon14.png"><img src="/images/carbon14.png" style="width: 90%;" alt="w2"></a> <br>
+
+
+
+											</p>
+										</article>
+										
+										
+										
+										
+									</div>
+
+							</div>
+							<div class="col-4 col-12-medium">
+
+						
+						</div>
+					</div>
+				</section>
+
+			
+			
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
+
+
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById("myImg");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function(){
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+      modal.style.display = "none";
+    }
+    </script>
